@@ -1,3 +1,6 @@
+#This file is essential to scraping information relative to baseball.
+#Past box scores, past weather data, future schedules, projected weather, and projected lineups are among the information scraped.
+
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
