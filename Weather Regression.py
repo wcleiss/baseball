@@ -1,3 +1,9 @@
+#The Weather Regression script is only done before the season begins but it ingests many seasons worth of play by play data and merges it with weather data for that game.
+#The idea is to run regression analysis against the weather/play by play data to determine the effect temperature, wind speed, and wind direction has on the outcome.
+#I use linear regression at the moment and split stats out into 3 frames: Wind In, Wind Out, Wind Neutral
+#However I have considered migrating to Neural Networks in the future to forgo the splitting into 3 frames.
+
+
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
