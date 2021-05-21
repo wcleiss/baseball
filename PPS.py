@@ -1,3 +1,9 @@
+#The PPS is the Player Projection System which uses a hybrid of a weighted baseline + nearest neighbor analysis to project each player's statistics for the upcoming season
+#This is helpful to fill in gaps until the player has had enough at bats/batters faced to constitute a large enough sample size from the current season's statistics.
+#The projection system projects platoon split statistics for batters and pitchers.
+#It calculates statistics for new players/rookies based on performace of rookies in the past. 
+#It also projects the overall league average by split and park factors for the upcoming season as well.
+
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import Normalizer
@@ -378,7 +384,7 @@ def savant_ids():
     all_merge.to_csv('pps\\player_info.csv', index=False, header=True)
 
 #After Pruning Duplicates, Rename File to player_info_r1.csv
-#This Function Replaces Mexican Letters
+#This Function Replaces Spanish Letters
 #Anyone Missing from R1 goes to the R2 File
 #Correct Players from R1 go to the Yes File
 #Must Prune Remaining Manually, bind pruned R2 to Yes File
