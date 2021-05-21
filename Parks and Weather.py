@@ -1,3 +1,10 @@
+#This is the 2nd part of the baseball model process and this file handles the accounting of weather and park factors on a player's stats.
+#First, weather data is merged with each player's at bats/batters faced and regression analysis on the temperature, wind speed, and wind direction adjusts the stats accordingly.
+#The idea is to "neutralize" a player's stats, and make his stats as if each game he played was 72 degrees with no wind.
+#Then park factors are taken into account. Park Factors are done after weather adjustments to ensure that weather does not play a role in calculating each park's influence.
+#Park factors like weather are done to "neutralize" a player's stats and make his stats as if each game he played was in the average park with average dimensions/altitude.
+#The park factors are considered weather neutralized, as park factors on their own may be too influenced by weather, i.e. San Francisco or Oakland
+
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
