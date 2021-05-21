@@ -1,3 +1,10 @@
+#This is the 3rd part of the baseball process, which factors in home advantage and opponent adjustments.
+#Home advantage is calculated in a simple manner by determining the delta from the league average for away stats and home stats.
+#Opponent Adjustments seek to adjust each player's stats based on the strength of batters/pitchers they have faced
+#The idea is to "neutralize" each player's stats to where the stats would reflect what their expected stats would be against the league average pitcher/batter.
+#2 rounds of adjustments are used to stablilize.
+#Opponent strength is determined by calculating their stats vs. the league average as was done in the Savant Wrangle file.
+
 import pandas as pd
 import numpy as np
 
