@@ -1,3 +1,10 @@
+#This script is the first step of my baseball model's process as it takes the raw statcast data from MLB and cleans it, transforms it, and structures it.
+#The script is divided into two parts, current year is the list of processes for current season's stats, and then there is a separate process for previous seasons.
+#The main reason current year has a different process is so it can impute statistics of players with not enough sample size with their preseason projections.
+#the script calculates batter/pitcher averages, then calculates their stats vs. the league average, imputes their preseason estimates into fill gaps
+#The script also calculates the average number of pitches batters/pitchers accumulate in an at bat, the max number of pitches a pitcher throws in an appearance
+#Errors are also calculated
+
 import pandas as pd
 import numpy as np
 
